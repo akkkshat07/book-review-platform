@@ -1,5 +1,7 @@
 # Book Review Platform
 
+Live: [https://book-review-platform-d8m9.vercel.app/](https://book-review-platform-d8m9.vercel.app/)
+
 A modern web app I built for sharing and discovering book reviews. Made with the MERN stack and Material UI.
 
 ## What it does
