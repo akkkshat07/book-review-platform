@@ -37,11 +37,16 @@ const Login = () => {
     setLoading(true);
     setError('');
 
+    console.log('Login attempt:', { email, password: password ? '***' : 'empty' });
+
     try {
       const response = await authAPI.login(email, password);
+      console.log('Login success:', response.data);
       login(response.data.token, response.data.user);
       navigate('/books');
     } catch (error) {
+      console.log('Login error:', error);
+      console.log('Error response:', error.response);
       setError(error.response?.data?.message || 'Login failed');
     } finally {
       setLoading(false);
