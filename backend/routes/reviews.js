@@ -33,7 +33,7 @@ router.get('/book/:bookId', async (req, res) => {
 
 router.post('/', auth, [
   body('reviewText').notEmpty().trim().isLength({ max: 1000 }),
-  body('rating').isInt({ min: 1, max: 5 }),
+  body('rating').isFloat({ min: 1, max: 5 }),
   body('bookId').isMongoId()
 ], async (req, res) => {
   try {
